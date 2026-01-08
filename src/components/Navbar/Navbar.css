@@ -8,7 +8,7 @@
     max-width: 1150px;
     z-index: 1000;
     padding: 0.7rem 2rem;
-    background: rgba(10, 10, 10, 0.50);
+    background: rgba(10, 10, 10, 0.40);
     backdrop-filter: blur(3px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 100px;
