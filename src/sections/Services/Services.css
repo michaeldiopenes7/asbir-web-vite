@@ -110,6 +110,10 @@
         margin-bottom: 3rem;
     }
 
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
     }

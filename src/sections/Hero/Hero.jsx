@@ -33,7 +33,7 @@ const Hero = () => (
             </div>
             <h1>
                 Modern Problems Require <br />
-                <span className="clipped-text">Test</span>
+                <span className="clipped-text">Modern Solutions</span>
             </h1>
             <p className="hero-subtext">
                 We take our time in understanding the IT needs of businesses and provide a
