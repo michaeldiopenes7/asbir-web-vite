@@ -1,5 +1,5 @@
 import React from 'react';
-import placeholderPrj from '../assets/images/placeholderprj.webp';
+import placeholderPrj from '../../assets/images/placeholderprj.webp';
 import './Works.css';
 
 const Works = () => (

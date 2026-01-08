@@ -1,9 +1,9 @@
 import React from 'react';
-import chipIcon from '../assets/icons/ChipIcon.svg';
-import linesSvg from '../assets/images/Lines.svg';
-import pixelMask from '../assets/images/Pixels Mask.svg';
-import gradientBg from '../assets/images/gradientbg.webp';
-import Partners from './Partners';
+import chipIcon from '../../assets/icons/ChipIcon.svg';
+import linesSvg from '../../assets/images/Lines.svg';
+import pixelMask from '../../assets/images/Pixels Mask.svg';
+import gradientBg from '../../assets/images/gradientbg.webp';
+import Partners from '../Partners/Partners';
 import './Hero.css';
 
 const Hero = () => (

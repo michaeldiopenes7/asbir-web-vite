@@ -1,10 +1,10 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import FileTree from '../assets/images/filetree.svg';
-import CloudIcon from '../assets/images/cloud.svg';
-import CostOptIcon from '../assets/images/costopt.svg';
-import DigiTransIcon from '../assets/images/digitrans.svg';
-import ScrollRevealText from '../components/ScrollRevealText';
+import FileTree from '../../assets/images/filetree.svg';
+import CloudIcon from '../../assets/images/cloud.svg';
+import CostOptIcon from '../../assets/images/costopt.svg';
+import DigiTransIcon from '../../assets/images/digitrans.svg';
+import ScrollRevealText from '../../components/ScrollRevealText/ScrollRevealText';
 import './Services.css';
 
 const Services = () => {
