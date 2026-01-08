@@ -4,6 +4,7 @@ import compression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/asbir-web-vite/',
   plugins: [
     react(),
     // Gzip compression for smaller file transfers
