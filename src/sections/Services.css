@@ -1,0 +1,120 @@
+.section-header {
+    margin-bottom: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service-card {
+    background: transparent;
+    border: none;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card.large {
+    display: flex;
+    flex-direction: row;
+    grid-column: span 2;
+    align-items: center;
+    gap: 4rem;
+}
+
+@media (min-width: 1025px) {
+
+    .service-card.large.cloud-card,
+    .service-card.large.digi-card {
+        flex-direction: row-reverse;
+    }
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.service-info p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.tags {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    padding: 0.5rem 1.2rem;
+    background: #0a0a0a;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.service-visual {
+    width: 100%;
+    height: 250px;
+    background: #0a0a0a;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.large .service-visual {
+    width: 500px;
+    height: 350px;
+}
+
+@media (max-width: 1024px) {
+    .service-card.large {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .large .service-visual {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 3rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card.large {
+        grid-column: span 1;
+    }
+}

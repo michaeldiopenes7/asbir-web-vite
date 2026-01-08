@@ -1,0 +1,60 @@
+.cta-card {
+    position: relative;
+    background: linear-gradient(135deg, #ff6a00 0%, #ff4b00 100%);
+    border-radius: 40px;
+    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cta-glow {
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    filter: blur(80px);
+}
+
+.cta-text {
+    flex: 2;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.info-item span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.info-item p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .cta-card {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+}

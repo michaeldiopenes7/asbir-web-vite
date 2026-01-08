@@ -4,6 +4,7 @@ import partner2 from '../assets/images/placeholderprtnr1.png';
 import partner3 from '../assets/images/placeholderprtnr2.png';
 import partner4 from '../assets/images/placeholderprtnr3.png';
 import partner5 from '../assets/images/placeholderprtnr4.png';
+import './Partners.css';
 
 const Partners = () => (
     <section className="partners">

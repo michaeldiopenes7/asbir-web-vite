@@ -1,0 +1,91 @@
+.team-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    min-height: 400px;
+}
+
+.team-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.team-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-10px);
+}
+
+.member-photo {
+    height: 350px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+    position: relative;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.member-photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 105, 0, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.team-card:hover .member-photo::after {
+    opacity: 1;
+}
+
+.team-card:hover .member-photo {
+    transform: scale(1.05);
+}
+
+.member-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.member-info h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+}
+
+.member-info p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/logos/asbir-logo.svg';
 import logomark from '../assets/images/asbir-logomark.svg';
+import './Navbar.css';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);

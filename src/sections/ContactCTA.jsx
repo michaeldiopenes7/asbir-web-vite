@@ -1,4 +1,5 @@
 import React from 'react';
+import './ContactCTA.css';
 
 const ContactCTA = () => (
     <section className="contact-cta">

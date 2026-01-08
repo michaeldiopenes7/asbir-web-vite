@@ -1,0 +1,246 @@
+.navbar {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: calc(100% - (var(--content-padding) * 2));
+    max-width: 1150px;
+    z-index: 1000;
+    padding: 0.7rem 2rem;
+    background: rgba(10, 10, 10, 0.50);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    will-change: max-width;
+    contain: layout;
+}
+
+.navbar.scrolled {
+    max-width: 450px;
+    padding: 0.8rem 1rem;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-spacer {
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-basis: 0;
+}
+
+.side-spacer {
+    flex-grow: 0;
+}
+
+.middle-spacer {
+    flex-grow: 1;
+}
+
+.navbar.scrolled .side-spacer {
+    flex-grow: 1;
+}
+
+.navbar.scrolled .middle-spacer {
+    flex-grow: 0;
+    flex-basis: 2.5rem;
+}
+
+.logo-wrapper {
+    position: relative;
+    height: 28px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-wrapper a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.navbar.scrolled .logo-wrapper {
+    width: 32px;
+}
+
+.navbar-logo {
+    height: 28px;
+    width: auto;
+    display: block;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
+
+.navbar-logo.logomark {
+    position: absolute;
+    left: 0;
+}
+
+.navbar-logo.full-logo {
+    position: absolute;
+    left: 0;
+}
+
+.navbar-logo.hidden {
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    transition: gap 0.8s ease;
+}
+
+.navbar.scrolled .nav-links {
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.nav-links a.active {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+
+.hamburger-btn .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hamburger-btn .bar.open:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-btn .bar.open:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn .bar.open:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    border-radius: 0 0 32px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.mobile-menu a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.mobile-menu a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .navbar {
+        top: 20px;
+        width: calc(100% - (var(--content-padding) * 2));
+        max-width: none;
+        padding: 1rem 1.5rem;
+        overflow: visible;
+    }
+
+    .navbar.scrolled {
+        max-width: none;
+        width: calc(100% - (var(--content-padding) * 2));
+        padding: 1rem 1.5rem;
+    }
+
+    .navbar-logo.full-logo {
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+        display: block !important;
+        position: static !important;
+    }
+
+    .navbar-logo.logomark {
+        opacity: 0 !important;
+        display: none !important;
+    }
+
+    .logo-wrapper {
+        overflow: visible;
+    }
+
+    .navbar.scrolled .logo-wrapper {
+        width: 120px;
+    }
+
+    .nav-content {
+        justify-content: space-between;
+    }
+
+    .nav-spacer {
+        display: none;
+    }
+}

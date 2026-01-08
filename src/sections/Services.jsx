@@ -5,6 +5,7 @@ import CloudIcon from '../assets/images/cloud.svg';
 import CostOptIcon from '../assets/images/costopt.svg';
 import DigiTransIcon from '../assets/images/digitrans.svg';
 import ScrollRevealText from '../components/ScrollRevealText';
+import './Services.css';
 
 const Services = () => {
     const headerRef = useRef(null);

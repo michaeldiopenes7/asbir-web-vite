@@ -1,4 +1,5 @@
 import React from 'react';
+import './VisionBanner.css';
 
 const VisionBanner = () => (
     <section className="vision-banner" id="about">

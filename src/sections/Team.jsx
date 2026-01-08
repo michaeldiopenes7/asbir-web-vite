@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Team.css';
 
 const Team = () => {
     const [activeTab, setActiveTab] = useState('All');

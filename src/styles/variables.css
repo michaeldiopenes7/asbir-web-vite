@@ -1,0 +1,43 @@
+:root {
+    /* Colors */
+    --bg-color: #000000;
+    --card-bg: #111111;
+    --primary-color: #FF6900;
+    --primary-gradient: linear-gradient(135deg, #FF6900 0%, #FF4500 100%);
+    --accent-color: #ffb800;
+
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+
+    /* Borders & Glass Effects */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+
+    /* Effects */
+    --glow-orange: 0 0 30px rgba(255, 105, 0, 0.4);
+
+    /* Typography */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* System */
+    color-scheme: dark;
+
+    /* Global Layout */
+    --side-gutter: 5%;
+    --max-width-container: 1400px;
+    --content-padding: 3rem;
+}
+
+@media (max-width: 1200px) {
+    :root {
+        --content-padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --content-padding: 1.5rem;
+    }
+}

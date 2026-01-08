@@ -1,0 +1,33 @@
+.footer {
+    padding: 6rem 0 4rem;
+    border-top: 1px solid var(--glass-border);
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 105, 0, 0.02) 100%);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copy {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-socials a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
