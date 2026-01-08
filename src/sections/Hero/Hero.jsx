@@ -15,7 +15,16 @@ const Hero = () => (
             <img src={pixelMask} alt="" className="pixel-mask-svg" loading="eager" aria-hidden="true" width="100%" height="100%" />
         </div>
         <div className="hero-gradient-img-container">
-            <img src={gradientBg} alt="" className="hero-gradient-img" loading="eager" aria-hidden="true" width="100%" height="100%" />
+            <img
+                src={gradientBg}
+                alt="Modern IT abstract background gradient"
+                className="hero-gradient-img"
+                loading="eager"
+                fetchpriority="high"
+                aria-hidden="false"
+                width="1200"
+                height="800"
+            />
         </div>
         {/* <div className="dot-grid"></div> */}
         <div className="container hero-content animate-fade-in">

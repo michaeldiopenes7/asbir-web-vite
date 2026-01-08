@@ -13,9 +13,9 @@ const Footer = () => (
                     © 2026 AsbirTech. All rights reserved.
                 </div>
                 <div className="footer-socials">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Github</a>
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="Github">Github</a>
                 </div>
             </div>
         </div>
