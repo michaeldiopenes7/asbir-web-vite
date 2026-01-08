@@ -1,0 +1,24 @@
+import React from 'react';
+
+const Footer = () => (
+    <footer className="footer">
+        <div className="container">
+            <div className="footer-content">
+                <div className="footer-logo">
+                    <span className="logo-icon">▲</span>
+                    <span>AsbirTech</span>
+                </div>
+                <div className="footer-copy">
+                    © 2026 AsbirTech. All rights reserved.
+                </div>
+                <div className="footer-socials">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Github</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+);
+
+export default Footer;
