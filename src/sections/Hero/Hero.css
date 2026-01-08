@@ -1,17 +1,12 @@
 .hero {
     position: relative;
     min-height: 100vh;
-    min-height: 100svh;
-    /* Stable height on iOS when toolbars are visible */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 0;
-    /* Clear default section padding */
-    padding-top: 80px;
-    /* Space for navbar */
+    padding-top: 100px;
     background-color: #000000;
 }
 
@@ -135,27 +130,12 @@
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding-top: 50px;
-        /* Reduced space for mobile navbar */
-        min-height: 100vh;
-        min-height: 100svh;
-        /* Use svh for maximum reliability on iOS */
-    }
-
-    .hero-content {
-        padding: 2rem var(--content-padding) 4rem;
-        gap: 1.2rem;
-    }
-
     .hero h1 {
         font-size: 2.8rem;
         letter-spacing: -1px;
-        line-height: 1.1;
     }
 
     .hero-subtext {
         font-size: 1rem;
-        line-height: 1.6;
     }
 }
