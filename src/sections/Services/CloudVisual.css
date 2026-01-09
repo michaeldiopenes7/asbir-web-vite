@@ -1,0 +1,118 @@
+.cloud-visual-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* Original desktop centering */
+    justify-content: center;
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+.cloud-svg {
+    width: 120%;
+    /* Original desktop scale */
+    height: auto;
+    max-width: none;
+    max-height: none;
+    transform: translateY(18%);
+    /* Original desktop vertical position */
+    overflow: visible;
+}
+
+.orbit-line-path {
+    stroke-width: 1;
+}
+
+.path-outer {
+    stroke: #522202;
+    stroke-dasharray: 22 22;
+}
+
+.path-middle {
+    stroke: #522202;
+}
+
+.path-inner {
+    stroke: #B54800;
+}
+
+.cloud-core-group {
+    filter: drop-shadow(0 0 35px rgba(255, 87, 34, 0.8));
+    z-index: 10;
+}
+
+.bubble-bg {
+    fill: #ffffff;
+    filter: drop-shadow(0 0 15px rgba(255, 105, 0, 0.6));
+}
+
+.icon-orbit {
+    transform: translate(300px, 300px);
+    pointer-events: auto;
+}
+
+/* Stable animation speeds */
+.orbit-group[style*="--radius: 260"] .icon-orbit {
+    animation: orbit-cw 40s linear infinite;
+}
+
+.orbit-group[style*="--radius: 180"] .icon-orbit {
+    animation: orbit-ccw 25s linear infinite;
+}
+
+.orbit-group[style*="--radius: 100"] .icon-orbit {
+    animation: orbit-cw 15s linear infinite;
+}
+
+@keyframes orbit-cw {
+    from {
+        transform: translate(300px, 300px) rotate(calc(var(--init-angle) * 1deg)) translateY(calc(var(--radius) * -1px)) rotate(calc(var(--init-angle) * -1deg));
+    }
+
+    to {
+        transform: translate(300px, 300px) rotate(calc(var(--init-angle) * 1deg + 360deg)) translateY(calc(var(--radius) * -1px)) rotate(calc(var(--init-angle) * -1deg - 360deg));
+    }
+}
+
+@keyframes orbit-ccw {
+    from {
+        transform: translate(300px, 300px) rotate(calc(var(--init-angle) * 1deg)) translateY(calc(var(--radius) * -1px)) rotate(calc(var(--init-angle) * -1deg));
+    }
+
+    to {
+        transform: translate(300px, 300px) rotate(calc(var(--init-angle) * 1deg - 360deg)) translateY(calc(var(--radius) * -1px)) rotate(calc(var(--init-angle) * -1deg + 360deg));
+    }
+}
+
+/* Strict Responsiveness to preserve original desktop look */
+@media (max-width: 1024px) {
+    .cloud-visual-container {
+        align-items: flex-end;
+        /* Switch to bridge bottom anchoring for mobile clip */
+    }
+
+    .cloud-svg {
+        width: 180%;
+        /* Expand to fill card width on mobile */
+        transform: translateY(35%);
+        /* Deep translate to ensure bottom half is clipped */
+    }
+
+    .icon-bubble {
+        transform: scale(1.1);
+    }
+
+    .orbit-line-path {
+        stroke-width: 0.8;
+    }
+}
+
+@media (max-width: 480px) {
+    .cloud-svg {
+        width: 195%;
+        transform: translateY(38%);
+    }
+}

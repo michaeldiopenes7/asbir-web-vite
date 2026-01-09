@@ -5,6 +5,9 @@ import CloudIcon from '../../assets/images/cloud.svg';
 import CostOptIcon from '../../assets/images/costopt.svg';
 import DigiTransIcon from '../../assets/images/digitrans.svg';
 import ScrollRevealText from '../../components/ScrollRevealText/ScrollRevealText';
+import CodeVisual from './CodeVisual';
+import CloudVisual from './CloudVisual';
+import CostVisual from './CostVisual';
 import './Services.css';
 
 const Services = () => {
@@ -43,7 +46,7 @@ const Services = () => {
                     {/* Web Development */}
                     <div className="service-card large web-dev-card">
                         <div className="service-visual code-viz">
-                            <img src={FileTree} alt="Filesystem Structure" className="img-contain" style={{ padding: '1rem' }} />
+                            <CodeVisual />
                         </div>
                         <div className="service-info">
                             <h3>Web Development</h3>
@@ -60,13 +63,8 @@ const Services = () => {
 
                     {/* Web & Cloud Consulting */}
                     <div className="service-card large cloud-card">
-                        <div className="service-visual cloud-viz" style={{ padding: 0, height: '100%' }}>
-                            <img
-                                src={CloudIcon}
-                                alt="Cloud Architecture"
-                                className="img-cover"
-                                style={{ objectPosition: 'center right' }}
-                            />
+                        <div className="service-visual cloud-viz">
+                            <CloudVisual />
                         </div>
                         <div className="service-info">
                             <h3>Web & Cloud Consulting</h3>
@@ -81,13 +79,8 @@ const Services = () => {
 
                     {/* Cost Reduction & Optimisation */}
                     <div className="service-card large cost-card">
-                        <div className="service-visual cost-viz" style={{ padding: 0 }}>
-                            <img
-                                src={CostOptIcon}
-                                alt="Cost Optimization"
-                                className="img-cover"
-                                style={{ objectPosition: 'center left' }}
-                            />
+                        <div className="service-visual cost-viz">
+                            <CostVisual />
                         </div>
                         <div className="service-info">
                             <h3>Cost Reduction & Optimisation</h3>
@@ -102,7 +95,7 @@ const Services = () => {
 
                     {/* Digital Transformation */}
                     <div className="service-card large digi-card">
-                        <div className="service-visual digi-viz" style={{ padding: 0, height: '100%' }}>
+                        <div className="service-visual digi-viz">
                             <img
                                 src={DigiTransIcon}
                                 alt="Digital Transformation"

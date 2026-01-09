@@ -19,6 +19,8 @@
     z-index: 0;
     pointer-events: none;
     background: radial-gradient(circle at center, rgba(255, 100, 0, 0.15), transparent 70%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
 .hero-gradient-img {
@@ -39,7 +41,9 @@
     align-items: center;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.6;
+    opacity: 0.9;
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .hero-lines-svg {
@@ -61,6 +65,8 @@
     z-index: 1;
     pointer-events: none;
     overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
 .pixel-mask-svg {
@@ -151,23 +157,31 @@
     }
 
     .hero-lines-container {
-        opacity: 0.95;
-        top: -25%;
+        top: 0;
+        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     }
 
     .hero-lines-svg {
-        transform: scale(1.4);
-        transform-origin: top center;
+        transform: scale(1.1);
+        transform-origin: center center;
+    }
+
+    .hero-gradient-img-container {
+        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     }
 
     .pixel-mask-container {
         opacity: 0.85;
         top: auto;
-        bottom: -10%;
+        bottom: -5%;
         left: 50%;
         transform: translateX(-50%);
         height: 100%;
         display: flex !important;
+        -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     }
 
     .pixel-mask-svg {

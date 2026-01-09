@@ -102,6 +102,12 @@
 
     .large .service-visual {
         width: 100%;
+        height: 220px;
+        /* Force all visual containers to match the cloud-card's compact height on mobile */
+    }
+
+    .service-visual {
+        height: 220px;
     }
 }
 

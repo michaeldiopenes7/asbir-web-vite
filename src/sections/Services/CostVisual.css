@@ -1,0 +1,67 @@
+.cost-visual-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.stats-bars {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-row {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.stat-bar {
+    height: 100%;
+    width: var(--desktop-w);
+    background: var(--row-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.2rem;
+    box-sizing: border-box;
+    position: relative;
+    will-change: transform, opacity;
+    overflow: hidden;
+    /* Contain the label */
+}
+
+.stat-label {
+    color: var(--text-color);
+    font-size: 0.85rem;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: calc(100% - 1rem);
+    /* Prevents text from touching left edge */
+}
+
+@media (max-width: 768px) {
+    .cost-visual-container {
+        padding: 0;
+    }
+
+    .stats-bars {
+        gap: 0;
+        /* Ensure zero gap between bars on mobile */
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        padding-right: 0.5rem;
+    }
+}

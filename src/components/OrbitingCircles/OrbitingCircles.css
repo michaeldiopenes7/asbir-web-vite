@@ -1,0 +1,71 @@
+.orbiting-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.orbiting-path-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(var(--radius) * var(--radius-multiplier, 1) * 2px);
+    height: calc(var(--radius) * var(--radius-multiplier, 1) * 2px);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    --radius-multiplier: 1;
+}
+
+.orbiting-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    pointer-events: auto;
+    --radius-multiplier: 1;
+    animation: orbit calc(var(--duration) * 1s) linear infinite;
+    animation-delay: calc(var(--delay) * 1s);
+}
+
+@media (max-width: 768px) {
+
+    .orbiting-item,
+    .orbiting-path-circle {
+        --radius-multiplier: 0.65;
+    }
+}
+
+.orbiting-container.reverse .orbiting-item {
+    animation-direction: reverse;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotate(calc(var(--angle))) translateX(calc(var(--radius) * var(--radius-multiplier) * 1px)) rotate(calc(var(--angle) * -1));
+    }
+
+    to {
+        transform: rotate(calc(var(--angle) + 360deg)) translateX(calc(var(--radius) * var(--radius-multiplier) * 1px)) rotate(calc((var(--angle) + 360deg) * -1));
+    }
+}
+
+/* Base styles for the icons inside */
+.orbiting-item svg {
+    width: clamp(24px, 5vw, 40px);
+    height: clamp(24px, 5vw, 40px);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.orbiting-item:hover svg {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+}

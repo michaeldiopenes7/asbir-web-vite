@@ -1,0 +1,26 @@
+.code-visual-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Removed padding to maximize container */
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+.code-svg {
+    width: 100%;
+    height: 100%;
+    /* Ensure it scales nicely but doesn't distort */
+    max-width: 450px;
+}
+
+@media (max-width: 768px) {
+    .code-svg {
+        max-width: 100%;
+        scale: 1.1;
+        /* Slight zoom on mobile for readability */
+    }
+}
