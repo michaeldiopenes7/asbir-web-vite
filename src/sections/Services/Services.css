@@ -39,6 +39,10 @@
 
 @media (min-width: 1025px) {
 
+    .service-card.large {
+        min-height: 480px;
+    }
+
     .service-card.large.cloud-card,
     .service-card.large.digi-card {
         flex-direction: row-reverse;
@@ -91,7 +95,11 @@
 
 .large .service-visual {
     width: 500px;
-    height: 350px;
+    height: 380px;
+}
+
+.web-dev-card .service-visual {
+    height: 310px;
 }
 
 @media (max-width: 1024px) {
