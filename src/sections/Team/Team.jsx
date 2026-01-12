@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Team.css';
 import { teamMembers, getTeamByCategory } from '../../data/teamMembers';
+import cardBg from '../../assets/images/cardbgteam.png';
 
 const Team = () => {
     const [activeTab, setActiveTab] = useState('All');
@@ -70,6 +71,7 @@ const Team = () => {
                     <div className="team-grid">
                         {visibleMembers.map((member) => (
                             <div className="team-card" key={member.id}>
+                                <img src={cardBg} alt="" className="card-bg-image" />
                                 <div className="card-bg-gradient"></div>
 
                                 <div className="member-image-container">

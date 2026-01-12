@@ -46,7 +46,6 @@ const Services = () => {
                     {/* Web Development */}
                     <div className="service-card large web-dev-card">
                         <div className="service-visual code-viz">
-                            <CodeVisual />
                         </div>
                         <div className="service-info">
                             <h3>Web Development</h3>
@@ -96,12 +95,6 @@ const Services = () => {
                     {/* Digital Transformation */}
                     <div className="service-card large digi-card">
                         <div className="service-visual digi-viz">
-                            <img
-                                src={DigiTransIcon}
-                                alt="Digital Transformation"
-                                className="img-cover"
-                                style={{ objectPosition: 'center right' }}
-                            />
                         </div>
                         <div className="service-info">
                             <h3>Digital Transformation</h3>
