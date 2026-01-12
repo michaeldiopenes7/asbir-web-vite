@@ -26,18 +26,18 @@
 
     /* Global Layout */
     --side-gutter: 5%;
-    --max-width-container: 1400px;
-    --content-padding: 3rem;
+    --max-width-container: 1500px;
+    --content-padding: 4rem;
 }
 
 @media (max-width: 1200px) {
     :root {
-        --content-padding: 2.5rem;
+        --content-padding: 3rem;
     }
 }
 
 @media (max-width: 768px) {
     :root {
-        --content-padding: 1.5rem;
+        --content-padding: 2rem;
     }
 }

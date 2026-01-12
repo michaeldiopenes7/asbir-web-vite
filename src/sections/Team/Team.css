@@ -22,66 +22,107 @@
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     min-height: 400px;
 }
 
+@media (max-width: 1400px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .team-card {
-    background: var(--card-bg);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid var(--glass-border);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: fadeIn 0.5s ease forwards;
-}
-
-.team-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-10px);
-}
-
-.member-photo {
-    height: 350px;
-    background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
     position: relative;
-    transition: 0.5s ease;
+    background: #000;
+    border-radius: 12px;
     overflow: hidden;
+    height: 350px;
+    border: none;
+    transition: transform 0.3s ease;
 }
 
-.member-photo::after {
-    content: '';
+.card-bg-gradient {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 50% 50%, rgba(255, 105, 0, 0.1) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.team-card:hover .member-photo::after {
+    background: linear-gradient(to top, #000000 0%, #FF7B00 40%, #A84803 100%);
     opacity: 1;
+    z-index: 1;
 }
 
-.team-card:hover .member-photo {
-    transform: scale(1.05);
+.member-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
+
+.member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
 
 .member-info {
-    padding: 1.5rem;
-    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.70);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 2rem 1.5rem;
+    z-index: 4;
+    text-align: left;
 }
 
 .member-info h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .member-info p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    color: #FF7B00;
+    font-size: clamp(0.65rem, 0.85rem, 0.85rem);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
 }
 
 @media (max-width: 480px) {

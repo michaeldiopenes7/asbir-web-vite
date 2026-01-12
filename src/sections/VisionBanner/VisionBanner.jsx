@@ -1,22 +1,24 @@
 import React from 'react';
 import './VisionBanner.css';
+import aboutUsBg from '../../assets/svgs/aboutus.svg';
 
 const VisionBanner = () => (
-    <section className="vision-banner" id="about">
+    <section className="vision-banner" id="about" style={{ backgroundImage: `url(${aboutUsBg})` }}>
         <div className="vision-glow"></div>
         <div className="container vision-content">
             <div className="vision-left">
-                <div className="badge">Vision</div>
+                <div className="badge">About Us</div>
                 <h3>
                     Delivering technology services that fit the way your business works
                 </h3>
             </div>
             <div className="vision-right">
                 <p>
-                    Our mission is to empower businesses by providing innovative technology solutions that streamline operations and drive growth. We believe in the power of technology to transform the way we work and live.
+                    Asbir Tech is a web development and IT consulting company established in 2016 in the Philippines. In 2022, it was brought to Australia when one of its partners emigrated. Since its inception in 2016 the company has been serving IT and non-IT organizations, helping to achieve a variety of goals and objectives with digital solutions and recent trend technologies.
                 </p>
+                <h4>The Dream Team</h4>
                 <p>
-                    We work closely with our clients to understand their unique challenges and deliver customized solutions that meet their specific needs.
+                    Comprised of developers, engineers, designers, UI/UX specialists, cyber security analysts, projects managers, QA and tech support specialists - the ever growing company prides itself in having talented and highly-skilled individuals, battle-tested and ready to deliver the highest quality of service.
                 </p>
             </div>
         </div>

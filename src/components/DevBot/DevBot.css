@@ -1,0 +1,350 @@
+.dev-bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dev-bot.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Speech Bubble */
+.dev-bot-bubble {
+    position: relative;
+    background: linear-gradient(135deg, #FF7B00 0%, #FF9933 100%);
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 24px rgba(255, 123, 0, 0.3);
+    animation: float 3s ease-in-out infinite;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.dev-bot-message {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    animation: fadeInOut 0.5s ease-in-out;
+}
+
+.bubble-tail {
+    position: absolute;
+    bottom: -8px;
+    right: 40px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FF9933;
+}
+
+.close-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid #FF7B00;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.close-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: rotate(90deg);
+    border-color: #FF9933;
+}
+
+/* Robot Character */
+.dev-bot-character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* Robot Head */
+.robot-head {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 12px;
+    border: 3px solid #FF7B00;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 2px 4px rgba(255, 123, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Antenna */
+.antenna {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 15px;
+    background: #FF7B00;
+    animation: antennaGlow 2s ease-in-out infinite;
+}
+
+.antenna-ball {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #FF7B00;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #FF7B00;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Eyes */
+.robot-eyes {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.eye {
+    width: 12px;
+    height: 12px;
+    background: #00ff88;
+    border-radius: 50%;
+    position: relative;
+    box-shadow:
+        0 0 8px #00ff88,
+        inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    animation: blink 4s ease-in-out infinite;
+}
+
+.pupil {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #003322;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: lookAround 5s ease-in-out infinite;
+}
+
+/* Mouth */
+.robot-mouth {
+    width: 20px;
+    height: 3px;
+    background: #FF7B00;
+    border-radius: 2px;
+    margin-top: 2px;
+    animation: smile 3s ease-in-out infinite;
+}
+
+/* Robot Body */
+.robot-body {
+    position: relative;
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 8px;
+    border: 3px solid #FF7B00;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.body-light {
+    width: 8px;
+    height: 8px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00ff88;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.body-panel {
+    width: 30px;
+    height: 2px;
+    background: #FF7B00;
+    border-radius: 1px;
+    opacity: 0.6;
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(0.9);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    90%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    95% {
+        transform: scaleY(0.1);
+    }
+}
+
+@keyframes lookAround {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%);
+    }
+
+    25% {
+        transform: translate(-70%, -50%);
+    }
+
+    75% {
+        transform: translate(-30%, -50%);
+    }
+}
+
+@keyframes smile {
+
+    0%,
+    100% {
+        width: 20px;
+        border-radius: 2px;
+    }
+
+    50% {
+        width: 24px;
+        border-radius: 0 0 12px 12px;
+    }
+}
+
+@keyframes antennaGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px #FF7B00;
+    }
+
+    50% {
+        box-shadow: 0 0 15px #FF7B00;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dev-bot {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .dev-bot-bubble {
+        min-width: 200px;
+        max-width: 250px;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .dev-bot-message {
+        font-size: 0.85rem;
+    }
+
+    .robot-head {
+        width: 50px;
+        height: 50px;
+    }
+
+    .robot-body {
+        width: 40px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dev-bot {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .dev-bot-bubble {
+        min-width: 180px;
+        max-width: 220px;
+        padding: 0.7rem 1rem;
+    }
+
+    .dev-bot-message {
+        font-size: 0.8rem;
+    }
+}

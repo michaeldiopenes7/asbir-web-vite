@@ -30,9 +30,9 @@ const App = () => {
       <Hero />
       <Suspense fallback={<SectionLoader />}>
         <Services />
-        {/*<VisionBanner />
+        <VisionBanner />
         <Team />
-        <Works />
+        {/*<Works />
         <ContactCTA />
         <Footer />*/}
       </Suspense>

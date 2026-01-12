@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import FileTree from '../../assets/images/filetree.svg';
-import CloudIcon from '../../assets/images/cloud.svg';
-import CostOptIcon from '../../assets/images/costopt.svg';
-import DigiTransIcon from '../../assets/images/digitrans.svg';
+import FileTree from '../../assets/svgs/filetree.svg';
+import CloudIcon from '../../assets/svgs/cloud.svg';
+import CostOptIcon from '../../assets/svgs/costopt.svg';
+import DigiTransIcon from '../../assets/svgs/digitrans.svg';
 import ScrollRevealText from '../../components/ScrollRevealText/ScrollRevealText';
 import CodeVisual from './CodeVisual';
 import CloudVisual from './CloudVisual';

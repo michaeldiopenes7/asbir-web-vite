@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import securityIcon from '../../assets/images/security.svg';
-import infraIcon from '../../assets/images/infrastructure.svg';
-import dbIcon from '../../assets/images/database.svg';
-import chipIcon from '../../assets/images/chip.svg';
-import apiIcon from '../../assets/images/api.svg';
-import analyticsIcon from '../../assets/images/analytics.svg';
+import securityIcon from '../../assets/svgs/security.svg';
+import infraIcon from '../../assets/svgs/infrastructure.svg';
+import dbIcon from '../../assets/svgs/database.svg';
+import chipIcon from '../../assets/svgs/chip.svg';
+import apiIcon from '../../assets/svgs/api.svg';
+import analyticsIcon from '../../assets/svgs/analytics.svg';
 import './CloudVisual.css';
 
 const CloudVisual = () => {

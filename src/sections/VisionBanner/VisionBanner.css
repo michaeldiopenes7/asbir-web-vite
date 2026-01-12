@@ -1,26 +1,32 @@
 .vision-banner {
     position: relative;
-    background: linear-gradient(90deg, #1a0f00 0%, #3d1c00 100%);
+    background-color: #0d0400;
+    /* Deep dark brown base */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
+    padding: 8rem 0;
 }
 
+/* Optional: Additional discrete subtle glow if needed, or we rely on the background above */
 .vision-glow {
     position: absolute;
     right: -10%;
     top: -20%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(255, 106, 0, 0.4) 0%, transparent 70%);
-    filter: blur(60px);
-    will-change: transform;
-    transform: translateZ(0);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 106, 0, 0.15) 0%, transparent 70%);
+    filter: blur(80px);
     pointer-events: none;
+    z-index: 0;
 }
 
 .vision-content {
     display: flex;
-    gap: 4rem;
-    align-items: center;
+    gap: 6rem;
+    align-items: flex-start;
+    /* Align top since right side has more text */
     position: relative;
     z-index: 1;
 }
@@ -29,9 +35,22 @@
     flex: 1;
 }
 
+.vision-left .badge {
+    margin-bottom: 2rem;
+}
+
 .vision-left h3 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Responsive sizing matching visual weight */
     line-height: 1.1;
+    font-weight: 500;
+
+    /* Gradient Text Effect */
+    background: linear-gradient(to bottom, #ffffff 40%, #FFAF76 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .vision-right {
@@ -39,15 +58,33 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding-top: 4.5rem;
+    /* Align with H3 visually, accounting for badge height + margin */
+}
+
+.vision-right h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+    /* Orange text for header */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .vision-right p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
+    color: #FFEEDB;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
 }
 
 @media (max-width: 1024px) {
     .vision-content {
         flex-direction: column;
+        gap: 3rem;
+    }
+
+    .vision-left h3 {
+        font-size: 2.5rem;
     }
 }
