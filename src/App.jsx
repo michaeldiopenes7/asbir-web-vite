@@ -32,8 +32,8 @@ const App = () => {
         <Services />
         <VisionBanner />
         <Team />
-        {/*<Works />
-        <ContactCTA />
+        <Works />
+        {/*<ContactCTA />
         <Footer />*/}
       </Suspense>
     </div>

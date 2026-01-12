@@ -1,13 +1,3 @@
-/**
- * Team Members Data
- * Centralized data structure for all team members
- * 
- * To add a new team member:
- * 1. Add their image to /src/assets/images/team/ (e.g., JohnDoe.png)
- * 2. Import the image in teamImages.js
- * 3. Add the member object to the appropriate category below
- */
-
 import { teamImages } from './teamImages';
 
 export const teamMembers = [
@@ -31,7 +21,7 @@ export const teamMembers = [
         id: 'llena-eduard',
         name: 'Llena, Eduard',
         role: 'Marketing OIC',
-        image: teamImages.placeholder,
+        image: teamImages.sirDudz,
         category: ['Leadership'],
         order: 3
     },
@@ -39,7 +29,7 @@ export const teamMembers = [
         id: 'domingo-jason',
         name: 'Domingo, Jason Florante',
         role: 'PM / UX Testing / EPMO',
-        image: teamImages.placeholder,
+        image: teamImages.sirJas,
         category: ['Project Management'],
         order: 4
     },
@@ -47,9 +37,57 @@ export const teamMembers = [
         id: 'balaguer-sheera',
         name: 'Balaguer, Sheera Nister',
         role: 'Project Manager / Administrative',
-        image: teamImages.placeholder,
+        image: teamImages.mamShe,
         category: ['Project Management'],
         order: 5
+    },
+    {
+        id: 'member-6',
+        name: 'Jo, Kenanaiah Joseph',
+        role: 'Product Designer',
+        image: teamImages.placeholder,
+        category: ['Product Design'],
+        order: 6
+    },
+    {
+        id: 'member-7',
+        name: 'Alumbre, Claire',
+        role: 'UI/UX Designer',
+        image: teamImages.placeholder,
+        category: ['Product Design'],
+        order: 7
+    },
+    {
+        id: 'member-8',
+        name: 'Abines, Ada Katrina',
+        role: 'Backend Developer',
+        image: teamImages.placeholder,
+        category: ['Product Design'],
+        order: 8
+    },
+    {
+        id: 'member-9',
+        name: 'Santos, Maria',
+        role: 'QA Specialist',
+        image: teamImages.placeholder,
+        category: ['Project Management'],
+        order: 9
+    },
+    {
+        id: 'member-10',
+        name: 'Gonzales, Kevin',
+        role: 'Frontend Developer',
+        image: teamImages.placeholder,
+        category: ['Engineering'],
+        order: 10
+    },
+    {
+        id: 'member-11',
+        name: 'Lim, Sarah',
+        role: 'Content Strategist',
+        image: teamImages.placeholder,
+        category: ['Creative'],
+        order: 11
     }
 ];
 

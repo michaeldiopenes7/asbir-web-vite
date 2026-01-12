@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 4rem;
+    margin: 0 auto 4rem;
     flex-wrap: wrap;
+    max-width: 800px;
 }
 
 .filter-btn {
@@ -20,11 +21,72 @@
     border-color: var(--primary-color);
 }
 
+.team-carousel-container {
+    position: relative;
+    padding: 0 4rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
-    min-height: 400px;
+    gap: 1.2rem;
+    min-height: 350px;
+    width: 100%;
+}
+
+.team h2 {
+    margin-bottom: 1.2rem;
+}
+
+.team p {
+    font-weight: 300;
+    color: var(--text-secondary);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s ease;
+    backdrop-filter: blur(10px);
+}
+
+.carousel-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(255, 123, 0, 0.3);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
 }
 
 @media (max-width: 1400px) {
@@ -37,11 +99,45 @@
     .team-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .team-carousel-container {
+        padding: 0 3rem;
+    }
 }
 
 @media (max-width: 768px) {
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-carousel-container {
+        padding: 0;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        background: rgba(20, 20, 20, 0.9);
+        top: auto;
+        bottom: -60px;
+        transform: none;
+    }
+
+    .carousel-btn:hover:not(:disabled) {
+        transform: scale(1.1);
+    }
+
+    .prev-btn {
+        left: 30%;
+    }
+
+    .next-btn {
+        right: 30%;
+    }
+
+    /* Add spacing for bottom controls on mobile */
+    .team-grid {
+        margin-bottom: 4rem;
     }
 }
 
@@ -85,8 +181,6 @@
     object-fit: cover;
     object-position: center;
 }
-
-
 
 .member-info {
     position: absolute;
