@@ -21,7 +21,6 @@
 .service-card {
     background: transparent;
     border: none;
-    padding: 3rem;
     display: flex;
     flex-direction: column;
     transition: 0.4s ease;

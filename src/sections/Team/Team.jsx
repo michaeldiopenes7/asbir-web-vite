@@ -75,7 +75,7 @@ const Team = () => {
                                 <div className="card-bg-gradient"></div>
 
                                 <div className="member-image-container">
-                                    {member.image && <img src={member.image} alt={member.name} className="member-img" />}
+                                    {member.image && <img src={member.image} alt={member.name} className="member-img" draggable="false" />}
                                 </div>
 
                                 <div className="member-info">
