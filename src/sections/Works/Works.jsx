@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { caseStudies } from '../../data/caseStudies';
 import placeholderPrj from '../../assets/images/placeholderprj.webp';
 import './Works.css';
 
@@ -11,23 +13,15 @@ const Works = () => (
                 <p>Combining innovation and excellence in every project.</p>
             </div>
             <div className="works-list">
-                {[
-                    { id: '01', title: 'Real Estate Platform', tags: 'Web Development • UI/UX Design' },
-                    { id: '02', title: 'Fintech Dashboard', tags: 'Web Development • Branding' },
-                    { id: '03', title: 'Healthcare App', tags: 'Mobile App • User Interface' },
-                    { id: '04', title: 'E-commerce Engine', tags: 'Web Design • Marketing' },
-                    { id: '05', title: 'Travel Booking', tags: 'UI/UX Design • Development' },
-                    { id: '06', title: 'Social Network', tags: 'Mobile App • Social Media' },
-                ].map((work) => (
-                    <div className="work-item" key={work.id}>
-                        <div className="work-preview">
-                            <img src={placeholderPrj} alt={work.title} loading="lazy" />
-                        </div>
-                        <div className="work-details">
+                {caseStudies.map((work) => (
+                    <Link to={`/projects/${work.slug}`} className="work-item" key={work.id}>
+                        <img src={work.image || placeholderPrj} alt={work.title} className="work-bg-image" loading="lazy" />
+                        <div className="work-overlay"></div>
+                        <div className="work-content">
                             <h3>{work.title}</h3>
                             <p className="work-tags">{work.tags}</p>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

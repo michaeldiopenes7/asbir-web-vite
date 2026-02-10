@@ -1,95 +1,42 @@
 import { teamImages } from './teamImages';
 
-export const teamMembers = [
-    {
-        id: 'asbir-syarief',
-        name: 'Asbir, Muhammad Syarief',
-        role: 'Chief Executive Officer',
-        image: teamImages.sirSyar,
-        category: ['Leadership'],
-        order: 1
-    },
-    {
-        id: 'orozco-paul',
-        name: 'Orozco, Paul Brett',
-        role: 'Chief Operations Officer',
-        image: teamImages.sirPaul,
-        category: ['Leadership'],
-        order: 2
-    },
-    {
-        id: 'llena-eduard',
-        name: 'Llena, Eduard',
-        role: 'Marketing OIC',
-        image: teamImages.sirDudz,
-        category: ['Leadership'],
-        order: 3
-    },
-    {
-        id: 'domingo-jason',
-        name: 'Domingo, Jason Florante',
-        role: 'PM / UX Testing / EPMO',
-        image: teamImages.sirJas,
-        category: ['Project Management'],
-        order: 4
-    },
-    {
-        id: 'balaguer-sheera',
-        name: 'Balaguer, Sheera Nister',
-        role: 'Project Manager / Administrative',
-        image: teamImages.mamShe,
-        category: ['Project Management'],
-        order: 5
-    },
-    {
-        id: 'member-6',
-        name: 'Jo, Kenanaiah Joseph',
-        role: 'Product Designer',
-        image: teamImages.placeholder,
-        category: ['Product Design'],
-        order: 6
-    },
-    {
-        id: 'member-7',
-        name: 'Alumbre, Claire',
-        role: 'UI/UX Designer',
-        image: teamImages.placeholder,
-        category: ['Product Design'],
-        order: 7
-    },
-    {
-        id: 'member-8',
-        name: 'Abines, Ada Katrina',
-        role: 'Backend Developer',
-        image: teamImages.placeholder,
-        category: ['Product Design'],
-        order: 8
-    },
-    {
-        id: 'member-9',
-        name: 'Santos, Maria',
-        role: 'QA Specialist',
-        image: teamImages.placeholder,
-        category: ['Project Management'],
-        order: 9
-    },
-    {
-        id: 'member-10',
-        name: 'Gonzales, Kevin',
-        role: 'Frontend Developer',
-        image: teamImages.placeholder,
-        category: ['Engineering'],
-        order: 10
-    },
-    {
-        id: 'member-11',
-        name: 'Lim, Sarah',
-        role: 'Content Strategist',
-        image: teamImages.placeholder,
-        category: ['Creative'],
-        order: 11
-    }
+const CATEGORIES = {
+    LEADERSHIP: 'Leadership',
+    PROJECT_MANAGEMENT: 'Project Management',
+    PRODUCT_DESIGN: 'Product Design',
+    ENGINEERING: 'Engineering',
+    MARKETING: 'Marketing',
+};
+
+// Helper to create member objects cleanly
+const createMember = (order, id, name, role, category, image = teamImages.placeholder) => ({
+    id,
+    name,
+    role,
+    image,
+    category: Array.isArray(category) ? category : [category],
+    order
+});
+
+const membersData = [
+    // [id, name, role, category, image]
+    ['asbir-syarief', 'Asbir, Muhammad Syarief', 'Chief Executive Officer', CATEGORIES.LEADERSHIP, teamImages.sirSyar],
+    ['orozco-paul', 'Orozco, Paul Brett', 'Chief Operations Officer', CATEGORIES.LEADERSHIP, teamImages.sirPaul],
+    ['llena-eduard', 'Llena, Eduard', 'Marketing OIC', CATEGORIES.LEADERSHIP, teamImages.sirDudz],
+    ['domingo-jason', 'Domingo, Jason Florante', 'PM / UX Testing / EPMO', CATEGORIES.PROJECT_MANAGEMENT, teamImages.sirJas],
+    ['balaguer-sheera', 'Balaguer, Sheera Nister', 'Project Manager / Administrative', CATEGORIES.PROJECT_MANAGEMENT, teamImages.mamShe],
+    ['member-6', 'Jo, Kenanaiah Joseph', 'Product Designer', CATEGORIES.PRODUCT_DESIGN],
+    ['member-7', 'Alumbre, Claire', 'UI/UX Designer', CATEGORIES.PRODUCT_DESIGN],
+    ['member-8', 'Abines, Ada Katrina', 'Backend Developer', CATEGORIES.PRODUCT_DESIGN],
+    ['member-9', 'Santos, Maria', 'QA Specialist', CATEGORIES.PROJECT_MANAGEMENT],
+    ['member-10', 'Gonzales, Kevin', 'Frontend Developer', CATEGORIES.ENGINEERING],
+    ['member-11', 'Marjun Dequito', 'Content Strategist', CATEGORIES.MARKETING],
 ];
+
+export const teamMembers = membersData.map((data, index) => {
+    const [id, name, role, category, image] = data;
+    return createMember(index + 1, id, name, role, category, image);
+});
 
 /**
  * Filter team members by category
@@ -102,7 +49,6 @@ export const getTeamByCategory = (category) => {
 };
 
 /**
- * Get team member by ID
  * @param {string} id - Member ID
  * @returns {Object|null} Team member object or null
  */

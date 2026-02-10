@@ -1,76 +1,146 @@
+.contact-cta {
+    padding: 6rem 0;
+    position: relative;
+    z-index: 1;
+}
+
 .cta-card {
     position: relative;
-    background: linear-gradient(135deg, #ff6a00 0%, #ff4b00 100%);
-    border-radius: 40px;
-    padding: 4rem;
+    background: url(../../assets/images/ctacontact.png) no-repeat center center;
+    background-size: cover;
+    border-radius: 24px;
+    padding: 4rem 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-.cta-glow {
+.cta-card::before {
+    content: '';
     position: absolute;
-    top: -50%;
-    left: -20%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-    filter: blur(80px);
+    inset: 0;
+    background: linear-gradient(90deg, #d35400 0%, #a04000 100%);
+    z-index: 0;
+    opacity: 0.9;
+    mix-blend-mode: multiply;
+    display: none;
 }
 
-.cta-text {
-    flex: 2;
+/* Ensure content is above background */
+.cta-content-left,
+.cta-content-right {
     position: relative;
     z-index: 1;
 }
 
-.cta-text h2 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+.cta-content-left {
+    flex: 1;
+    max-width: 500px;
 }
 
-.cta-info {
+.cta-content-left h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.cta-content-left p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 500px;
+    color: #FFEEDB;
+}
+
+.cta-content-right {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    position: relative;
-    z-index: 1;
+    gap: 1.25rem;
+    align-items: flex-end;
 }
 
-.info-item span {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.8;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 350px;
 }
 
-.info-item p {
-    font-size: 1.5rem;
-    font-weight: 700;
+.icon-box {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
 }
 
+.icon-box svg {
+    width: 20px;
+    height: 20px;
+    stroke: rgba(255, 255, 255, 0.9);
+}
+
+.contact-item span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Underline style from reference */
+    padding-bottom: 2px;
+    display: inline-block;
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
     .cta-card {
+        padding: 3rem;
         flex-direction: column;
         gap: 3rem;
         text-align: center;
-        padding: 3rem;
+        background-position: center;
+    }
+
+    .cta-content-left {
+        max-width: 100%;
+    }
+
+    .cta-content-left p {
+        margin: 0 auto;
+    }
+
+    .cta-content-right {
+        align-items: center;
+        width: 100%;
+    }
+
+    .contact-item {
+        justify-content: center;
+        text-align: left;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .cta-card {
         padding: 2.5rem 1.5rem;
-        border-radius: 20px;
+        border-radius: 16px;
     }
 
-    .cta-text h2 {
-        font-size: 2.2rem;
+    .cta-content-left h2 {
+        font-size: 2rem;
     }
 
-    .info-item p {
-        font-size: 1.2rem;
+    .contact-item {
+        max-width: 100%;
     }
 }

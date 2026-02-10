@@ -23,19 +23,34 @@ const SectionLoader = () => (
   }} />
 );
 
+import { Routes, Route } from 'react-router-dom';
+import CaseStudy from './pages/CaseStudy/CaseStudy';
+
 const App = () => {
   return (
     <div className="app-wrapper">
       <Navbar />
-      <Hero />
-      <Suspense fallback={<SectionLoader />}>
-        <Services />
-        <VisionBanner />
-        <Team />
-        <Works />
-        {/*<ContactCTA />
-        <Footer />*/}
-      </Suspense>
+      <Routes>
+        <Route path="/" element={
+          <main>
+            <Hero />
+            <Suspense fallback={<SectionLoader />}>
+              <Services />
+              <VisionBanner />
+              <Team />
+              <Works />
+              <ContactCTA />
+              <Footer />
+            </Suspense>
+          </main>
+        } />
+        <Route path="/projects/:slug" element={
+          <Suspense fallback={<SectionLoader />}>
+            <CaseStudy />
+            <Footer />
+          </Suspense>
+        } />
+      </Routes>
     </div>
   );
 };
