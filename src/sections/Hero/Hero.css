@@ -143,9 +143,11 @@
     }
 
     .hero h1 {
-        font-size: 4rem;
+        font-size: 4rem !important;
         line-height: 1.1;
-        letter-spacing: -2px;
+        letter-spacing: -3px;
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        /* DIAGNOSTIC: If you see red, the CSS is working */
     }
 
     .hero-content {
