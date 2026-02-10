@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/" element={
           <main>
             <SEO
-              title="Home"
+              title="AsbirTech | Expert Web & Mobile App Development Agency"
               description="AsbirTech enables businesses to scale, transform, and gain a competitive advantage with robust and flexible web and mobile solutions."
               canonical="/"
             />
@@ -55,6 +55,29 @@ const App = () => {
             <CaseStudy />
             <Footer />
           </Suspense>
+        } />
+        <Route path="*" element={
+          <div style={{
+            height: '80vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: 'white',
+            textAlign: 'center',
+            padding: '2rem'
+          }}>
+            <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
+            <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>We couldn't find the page you're looking for.</p>
+            <a href="/" style={{
+              padding: '0.8rem 2rem',
+              background: 'white',
+              color: 'black',
+              textDecoration: 'none',
+              borderRadius: '30px',
+              fontWeight: '600'
+            }}>Back to Home</a>
+          </div>
         } />
       </Routes>
     </div>

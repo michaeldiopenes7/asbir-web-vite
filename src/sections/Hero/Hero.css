@@ -145,6 +145,7 @@
     .hero h1 {
         font-size: 4rem !important;
         line-height: 1.1;
+        font-weight: 500;
         letter-spacing: -2px;
     }
 
