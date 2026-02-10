@@ -29,5 +29,11 @@
     "terser": "^5.44.1",
     "vite": "^7.2.4",
     "vite-plugin-compression": "^0.5.1"
+  },
+  "overrides": {
+    "react-helmet-async": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }
