@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import SEO from './components/SEO/SEO';
 import './index.css';
 
 // Critical components (above the fold) - load immediately
@@ -33,6 +34,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={
           <main>
+            <SEO
+              title="Home"
+              description="AsbirTech enables businesses to scale, transform, and gain a competitive advantage with robust and flexible web and mobile solutions."
+              canonical="/"
+            />
             <Hero />
             <Suspense fallback={<SectionLoader />}>
               <Services />

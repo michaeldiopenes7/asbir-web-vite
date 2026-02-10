@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { caseStudies } from '../../data/caseStudies';
 import placeholderPrj from '../../assets/images/placeholderprj.webp';
+import SEO from '../../components/SEO/SEO';
 import './CaseStudy.css';
 
 const CaseStudy = () => {
@@ -25,6 +26,33 @@ const CaseStudy = () => {
 
     return (
         <article className="case-study-page">
+            <SEO
+                title={caseStudy.title}
+                description={caseStudy.description}
+                canonical={`/projects/${caseStudy.slug}`}
+                openGraphType="article"
+                image={caseStudy.image || placeholderPrj}
+                schema={{
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": caseStudy.title,
+                    "description": caseStudy.description,
+                    "image": caseStudy.image || placeholderPrj,
+                    "author": {
+                        "@type": "Organization",
+                        "name": "AsbirTech"
+                    },
+                    "publisher": {
+                        "@type": "Organization",
+                        "name": "AsbirTech",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://asbirtech.com/logo.png"
+                        }
+                    },
+                    "datePublished": "2024-01-01" // You might want to add a date field to your data
+                }}
+            />
             <div className="cs-container">
                 <header className="cs-header">
                     <div className="cs-categories">
