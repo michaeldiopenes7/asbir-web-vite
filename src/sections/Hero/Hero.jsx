@@ -21,7 +21,6 @@ const Hero = () => (
                 className="hero-gradient-img"
                 loading="eager"
                 fetchpriority="high"
-                aria-hidden="false"
                 width="1200"
                 height="800"
             />
@@ -29,7 +28,7 @@ const Hero = () => (
         {/* <div className="dot-grid"></div> */}
         <div className="container hero-content animate-fade-in">
             <div className="badge">
-                <img src={chipIcon} alt="" className="badge-icon" width="14" height="14" /> Web Development and IT Consulting
+                <img src={chipIcon} alt="" className="badge-icon" width="14" height="14" aria-hidden="true" /> Web Development and IT Consulting
             </div>
             <h1>
                 Modern Problems Require <br />

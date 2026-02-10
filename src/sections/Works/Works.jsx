@@ -15,7 +15,14 @@ const Works = () => (
             <div className="works-list">
                 {caseStudies.map((work) => (
                     <Link to={`/projects/${work.slug}`} className="work-item" key={work.id}>
-                        <img src={work.image || placeholderPrj} alt={work.title} className="work-bg-image" loading="lazy" />
+                        <img
+                            src={work.image || placeholderPrj}
+                            alt={work.title}
+                            className="work-bg-image"
+                            loading="lazy"
+                            width="600"
+                            height="400"
+                        />
                         <div className="work-overlay"></div>
                         <div className="work-content">
                             <h3>{work.title}</h3>

@@ -7,7 +7,7 @@ const Footer = () => (
         <div className="container">
             <div className="footer-content">
                 <div className="footer-left">
-                    <img src={logo} alt="Asbir Tech" className="footer-logo" />
+                    <img src={logo} alt="Asbir Tech" className="footer-logo" width="120" height="30" loading="lazy" />
                     <span className="copyright">© 2021 Asbir Tech, Inc.</span>
                 </div>
                 <div className="footer-right">

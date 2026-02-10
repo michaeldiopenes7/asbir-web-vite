@@ -30,7 +30,6 @@ const Team = () => {
     };
 
     const visibleMembers = displayedMembers.slice(startIndex, startIndex + itemsPerPage);
-    console.log('Visible Members:', visibleMembers);
     const showControls = displayedMembers.length > itemsPerPage;
 
     return (
@@ -71,11 +70,11 @@ const Team = () => {
                     <div className="team-grid">
                         {visibleMembers.map((member) => (
                             <div className="team-card" key={member.id}>
-                                <img src={cardBg} alt="" className="card-bg-image" />
+                                <img src={cardBg} alt="" className="card-bg-image" width="300" height="400" aria-hidden="true" />
                                 <div className="card-bg-gradient"></div>
 
                                 <div className="member-image-container">
-                                    {member.image && <img src={member.image} alt={member.name} className="member-img" draggable="false" />}
+                                    {member.image && <img src={member.image} alt={member.name} className="member-img" draggable="false" width="200" height="200" loading="lazy" />}
                                 </div>
 
                                 <div className="member-info">

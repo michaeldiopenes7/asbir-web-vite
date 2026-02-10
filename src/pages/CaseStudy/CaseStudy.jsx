@@ -76,6 +76,9 @@ const CaseStudy = () => {
                         src={caseStudy.image || placeholderPrj}
                         alt={caseStudy.title}
                         className="cs-hero-image"
+                        width="1200"
+                        height="675"
+                        loading="eager"
                     />
                 </div>
 
@@ -112,7 +115,13 @@ const CaseStudy = () => {
                         {moreProjects.map((project) => (
                             <Link to={`/projects/${project.slug}`} key={project.id} className="cs-more-card">
                                 <div className="cs-more-image-wrapper">
-                                    <img src={project.image || placeholderPrj} alt={project.title} loading="lazy" />
+                                    <img
+                                        src={project.image || placeholderPrj}
+                                        alt={project.title}
+                                        loading="lazy"
+                                        width="400"
+                                        height="250"
+                                    />
                                 </div>
                                 <div className="cs-more-info">
                                     <h4>{project.title}</h4>

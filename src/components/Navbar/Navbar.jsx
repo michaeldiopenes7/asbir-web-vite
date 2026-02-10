@@ -86,11 +86,15 @@ const Navbar = () => {
                             src={logo}
                             alt="Asbir Tech Logo"
                             className={`navbar-logo full-logo ${scrolled ? 'hidden' : ''}`}
+                            width="160"
+                            height="40"
                         />
                         <img
                             src={logomark}
                             alt="Asbir Tech Logomark"
                             className={`navbar-logo logomark ${scrolled ? '' : 'hidden'}`}
+                            width="40"
+                            height="40"
                         />
                     </a>
                 </div>
