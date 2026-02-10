@@ -78,7 +78,7 @@ const Team = () => {
                                 </div>
 
                                 <div className="member-info">
-                                    <h3>{member.name}</h3>
+                                    <h4>{member.name}</h4>
                                     <p>{member.role}</p>
                                 </div>
                             </div>
