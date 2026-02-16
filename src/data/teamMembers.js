@@ -38,7 +38,7 @@ const membersData = [
     ['salazar-jed', 'Salazar, Jed Justin', 'Staff Engineer', CATEGORIES.ENGINEERING, teamImages.sirJed],
 
     // Senior Software/Game/Security Engineers
-    ['abuyabor-jose', 'Abuyaboy, Jose Ryan', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.sirRyan],
+    ['abuyabor-jose', 'Abuyabor, Jose Ryan', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.sirRyan],
     ['brosas-john', 'Brosas, John Fiel', 'Senior Security Engineer', CATEGORIES.ENGINEERING, teamImages.sirJf],
     ['brosas-juni', 'Brosas, Juni', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.sirJuni],
     ['cid-raymond', 'Cid, Raymond Adrian', 'Senior Game Engineer', CATEGORIES.ENGINEERING],
