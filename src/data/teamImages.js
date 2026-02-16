@@ -19,6 +19,7 @@ import MamAds from '../assets/images/MamAds.png';
 import sirKen from '../assets/images/SirKen.png';
 import Mike from '../assets/images/Mike.png';
 import claire from '../assets/images/claire.png';
+import MamFabe from '../assets/images/MamFabe.png';
 
 // Placeholder Img
 import placeholder from '../assets/images/imgplchldr.jpg';
@@ -45,6 +46,7 @@ export const teamImages = {
     sirKen,
     Mike,
     claire,
+    MamFabe,
     // Fallback
     placeholder
 };

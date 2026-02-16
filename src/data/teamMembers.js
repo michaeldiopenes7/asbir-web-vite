@@ -81,7 +81,7 @@ const membersData = [
     ['mercado-elmer', 'Mercado, Elmer', 'Quality Assurance Analyst', CATEGORIES.QA],
 
     // Research & Admin Works
-    ['infante-fabe', 'Infante, Fabe Hillary', 'Researcher / Admin Works', CATEGORIES.ADMIN],];
+    ['infante-fabe', 'Infante, Fabe Hillary', 'Researcher / Admin Works', CATEGORIES.ADMIN, teamImages.MamFabe],];
 
 export const teamMembers = membersData.map((data, index) => {
     const [id, name, role, category, image] = data;
