@@ -5,7 +5,7 @@ import sirJas from '../assets/images/SirJas.png';
 import mamShe from '../assets/images/MamShe.png';
 import sirLloyd from '../assets/images/SirLloyd.png';
 import sirRigo from '../assets/images/SirRigo.png';
-import sirAnot from '../assets/images/sirAnot.png';
+import sirAnot from '../assets/images/SirAnot.png';
 import sirJed from '../assets/images/SirJed.png';
 import sirRyan from '../assets/images/SirRyan.png';
 import sirJf from '../assets/images/SirJf.png';
