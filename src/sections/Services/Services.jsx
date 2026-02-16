@@ -17,7 +17,6 @@ const Services = () => {
         offset: ["start 0.8", "end 0.2"]
     });
 
-    // Derived progress for the text reveal and grid entrance
     const textProgress = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
     const gridOpacity = useTransform(scrollYProgress, [0.4, 0.8], [0, 1]);
     const gridY = useTransform(scrollYProgress, [0.4, 0.8], [40, 0]);
@@ -46,6 +45,7 @@ const Services = () => {
                     {/* Web Development */}
                     <div className="service-card large web-dev-card">
                         <div className="service-visual code-viz">
+                            <CodeVisual />
                         </div>
                         <div className="service-info">
                             <h3>Web Development</h3>
@@ -95,6 +95,7 @@ const Services = () => {
                     {/* Digital Transformation */}
                     <div className="service-card large digi-card">
                         <div className="service-visual digi-viz">
+                            <img src={DigiTransIcon} alt="Digital Transformation" className="digi-icon" />
                         </div>
                         <div className="service-info">
                             <h3>Digital Transformation</h3>

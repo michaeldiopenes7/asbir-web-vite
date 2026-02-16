@@ -16,6 +16,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .service-card {
@@ -99,6 +101,13 @@
 
 .web-dev-card .service-visual {
     height: 310px;
+}
+
+.digi-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
 }
 
 @media (max-width: 1024px) {
