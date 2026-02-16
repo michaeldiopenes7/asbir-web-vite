@@ -20,6 +20,7 @@ import sirKen from '../assets/images/SirKen.png';
 import Mike from '../assets/images/Mike.png';
 import claire from '../assets/images/claire.png';
 
+// Placeholder Img
 import placeholder from '../assets/images/imgplchldr.jpg';
 export const teamImages = {
     // Leadership
