@@ -7,7 +7,7 @@ const Team = () => {
     const [activeTab, setActiveTab] = useState('All');
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
-    const tabs = ['All', 'Executives', 'Project Management', 'Engineering', 'Marketing', 'Product Design', 'Quality Assurance', 'Research & Admin Works', 'Neil Willer Nobleza'];
+    const tabs = ['All', 'Executives', 'Project Management', 'Engineering', 'Marketing', 'Product Design', 'Quality Assurance', 'Research & Admin Works'];
     const gridRef = React.useRef(null);
 
     const displayedMembers = getTeamByCategory(activeTab);

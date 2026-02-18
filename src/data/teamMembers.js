@@ -8,7 +8,6 @@ const CATEGORIES = {
     MARKETING: 'Marketing',
     QA: 'Quality Assurance',
     ADMIN: 'Research & Admin Works',
-    NEIL: 'Neil Willer Nobleza',
 };
 
 // Helper to create member objects cleanly
@@ -82,8 +81,7 @@ const membersData = [
     ['mercado-elmer', 'Mercado, Elmer', 'Quality Assurance Analyst', CATEGORIES.QA],
 
     // Research & Admin Works
-    ['infante-fabe', 'Infante, Fabe Hillary', 'Researcher / Admin Works', CATEGORIES.ADMIN, teamImages.fabe],
-    ['neil-willer', 'Nobleza, Neil Willer', 'LightofHeaven', CATEGORIES.NEIL],];
+    ['infante-fabe', 'Infante, Fabe Hillary', 'Researcher / Admin Works', CATEGORIES.ADMIN, teamImages.fabe],];
 
 
 export const teamMembers = membersData.map((data, index) => {
