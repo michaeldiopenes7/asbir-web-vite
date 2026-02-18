@@ -27,6 +27,8 @@ const SectionLoader = () => (
 import { Routes, Route } from 'react-router-dom';
 import CaseStudy from './pages/CaseStudy/CaseStudy';
 
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 const App = () => {
   return (
     <div className="app-wrapper">
@@ -57,6 +59,7 @@ const App = () => {
           </Suspense>
         } />
       </Routes>
+      <SpeedInsights />
     </div>
   );
 };
