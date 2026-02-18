@@ -28,6 +28,7 @@ import { Routes, Route } from 'react-router-dom';
 import CaseStudy from './pages/CaseStudy/CaseStudy';
 
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   return (
@@ -60,6 +61,7 @@ const App = () => {
         } />
       </Routes>
       <SpeedInsights />
+      <Analytics />
     </div>
   );
 };
