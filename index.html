@@ -78,9 +78,10 @@
     }
     </script>
 
-  <!-- Performance: Preconnect to Google Fonts -->
+  <!-- Performance: Preconnect and Preload -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="/src/assets/images/gradientbg.webp" fetchpriority="high" />
 
   <!-- Non-blocking font loading with preload -->
   <link rel="preload" as="style"

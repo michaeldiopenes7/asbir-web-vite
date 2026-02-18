@@ -11,19 +11,19 @@ const Partners = () => (
         <div className="container">
             <div className="partners-grid">
                 <div className="partner-logo">
-                    <img src={partner1} alt="Partner 1" width="160" height="80" loading="lazy" draggable="false" />
+                    <img src={partner1} alt="Partner 1" width="160" height="80" loading="eager" draggable="false" />
                 </div>
                 <div className="partner-logo">
-                    <img src={partner2} alt="Partner 2" width="160" height="80" loading="lazy" draggable="false" />
+                    <img src={partner2} alt="Partner 2" width="160" height="80" loading="eager" draggable="false" />
                 </div>
                 <div className="partner-logo">
-                    <img src={partner3} alt="Partner 3" width="160" height="80" loading="lazy" draggable="false" />
+                    <img src={partner3} alt="Partner 3" width="160" height="80" loading="eager" draggable="false" />
                 </div>
                 <div className="partner-logo">
-                    <img src={partner4} alt="Partner 4" width="160" height="80" loading="lazy" draggable="false" />
+                    <img src={partner4} alt="Partner 4" width="160" height="80" loading="eager" draggable="false" />
                 </div>
                 <div className="partner-logo">
-                    <img src={partner5} alt="Partner 5" width="160" height="80" loading="lazy" draggable="false" />
+                    <img src={partner5} alt="Partner 5" width="160" height="80" loading="eager" draggable="false" />
                 </div>
             </div>
         </div>
