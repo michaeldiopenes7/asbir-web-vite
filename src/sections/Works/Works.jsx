@@ -8,7 +8,7 @@ const Works = () => (
     <section className="works" id="works">
         <div className="container">
             <div className="section-header">
-                <div className="badge">Portfolio</div>
+                <div className="badge">Showcase</div>
                 <h2>Our Works</h2>
                 <p>Combining innovation and excellence in every project.</p>
             </div>

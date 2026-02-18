@@ -8,6 +8,7 @@ const CATEGORIES = {
     MARKETING: 'Marketing',
     QA: 'Quality Assurance',
     ADMIN: 'Research & Admin Works',
+    NEIL: 'Neil Willer Nobleza',
 };
 
 // Helper to create member objects cleanly
@@ -23,43 +24,43 @@ const createMember = (order, id, name, role, category, image = teamImages.placeh
 const membersData = [
     // [id, name, role, category, image]
     // Executives
-    ['asbir-syarief', 'Asbir, Muhammad Syarief', 'Chief Executive Officer', CATEGORIES.LEADERSHIP, teamImages.sirSyar],
-    ['orozco-paul', 'Orozco, Paul Brett', 'Chief Operations Officer', CATEGORIES.LEADERSHIP, teamImages.sirPaul],
-    ['llena-eduard', 'Llena, Eduard', 'Marketing OIC', [CATEGORIES.LEADERSHIP, CATEGORIES.MARKETING], teamImages.sirDudz],
+    ['asbir-syarief', 'Asbir, Muhammad Syarief', 'Chief Executive Officer', CATEGORIES.LEADERSHIP, teamImages.syar],
+    ['orozco-paul', 'Orozco, Paul Brett', 'Chief Operations Officer', CATEGORIES.LEADERSHIP, teamImages.paul],
+    ['llena-eduard', 'Llena, Eduard', 'Marketing OIC', [CATEGORIES.LEADERSHIP, CATEGORIES.MARKETING], teamImages.dudz],
 
     // Project Management
-    ['domingo-jason', 'Domingo, Jason Florante', 'PM / UX Testing / EPMO', CATEGORIES.PROJECT_MANAGEMENT, teamImages.sirJas],
-    ['balaguer-sheera', 'Balaguer, Sheera Nister', 'Project Manager / Administrative', CATEGORIES.PROJECT_MANAGEMENT, teamImages.mamShe],
-    ['maypa-lloyd', 'Maypa, Lloyd Kenneth', 'Project Manager / Scrum Master', CATEGORIES.PROJECT_MANAGEMENT, teamImages.sirLloyd],
+    ['domingo-jason', 'Domingo, Jason Florante', 'PM / UX Testing / EPMO', CATEGORIES.PROJECT_MANAGEMENT, teamImages.jas],
+    ['balaguer-sheera', 'Balaguer, Sheera Nister', 'Project Manager / Administrative', CATEGORIES.PROJECT_MANAGEMENT, teamImages.she],
+    ['maypa-lloyd', 'Maypa, Lloyd Kenneth', 'Project Manager / Scrum Master', CATEGORIES.PROJECT_MANAGEMENT, teamImages.lloyd],
 
     // Staff Engineers
-    ['talinting-rigo', 'Talinting, Rigo Rey', 'Staff Engineer', CATEGORIES.ENGINEERING, teamImages.sirRigo],
-    ['labastilla-arnold', 'Labastilla, Arnold', 'Staff Engineer', CATEGORIES.ENGINEERING, teamImages.sirAnot],
-    ['salazar-jed', 'Salazar, Jed Justin', 'Staff Engineer', CATEGORIES.ENGINEERING, teamImages.sirJed],
+    ['talinting-rigo', 'Talinting, Rigo Rey', 'Staff Engineer', CATEGORIES.ENGINEERING, teamImages.rigo],
+    ['labastilla-arnold', 'Labastilla, Arnold', 'Staff Engineer', CATEGORIES.ENGINEERING, teamImages.anot],
+    ['salazar-jed', 'Salazar, Jed Justin', 'Staff Engineer', CATEGORIES.ENGINEERING, teamImages.jed],
 
     // Senior Software/Game/Security Engineers
-    ['abuyabor-jose', 'Abuyabor, Jose Ryan', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.sirRyan],
-    ['brosas-john', 'Brosas, John Fiel', 'Senior Security Engineer', CATEGORIES.ENGINEERING, teamImages.sirJf],
-    ['brosas-juni', 'Brosas, Juni', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.sirJuni],
+    ['abuyabor-jose', 'Abuyabor, Jose Ryan', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.ryan],
+    ['brosas-john', 'Brosas, John Fiel', 'Senior Security Engineer', CATEGORIES.ENGINEERING, teamImages.jf],
+    ['brosas-juni', 'Brosas, Juni', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.juni],
     ['cid-raymond', 'Cid, Raymond Adrian', 'Senior Game Engineer', CATEGORIES.ENGINEERING],
-    ['dayado-leonil', 'Dayado, Leonil', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.sirLeonil],
-    ['valencia-edpaul', 'Valencia, Ed Paul', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.sirEd],
+    ['dayado-leonil', 'Dayado, Leonil', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.leonil],
+    ['valencia-edpaul', 'Valencia, Ed Paul', 'Senior Software Engineer', CATEGORIES.ENGINEERING, teamImages.ed],
 
     // Software Engineers / Server Admin
     ['amaro-lanice', 'Amaro, Lanice', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.chum],
-    ['bergado-sylv', 'Bergado, Sylvester', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.SirSylv],
-    ['dogomeo-ronald', 'Dogomeo, Ronald', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.SirRonald],
-    ['duhaylungsod-rigie', 'Duhaylungsod, Rigie', 'Software Engineer', CATEGORIES.ENGINEERING],
-    ['morimonte-emmanuel', 'Morimonte, Emmanuel', 'Server Administrator', CATEGORIES.ENGINEERING],
-    ['pascua-ronald', 'Pascua, Ronald', 'Software Engineer', CATEGORIES.ENGINEERING],
-    ['talingting-richy', 'Talingting, Richy RV', 'Software Engineer', CATEGORIES.ENGINEERING],
-    ['valencia-ely', 'Valencia, Ely Jose', 'Software Engineer', CATEGORIES.ENGINEERING],
+    ['bergado-sylv', 'Bergado, Sylvester', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.sylv],
+    ['dogomeo-ronald', 'Dogomeo, Ronald', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.ronald],
+    ['duhaylungsod-rigie', 'Duhaylungsod, Rigie', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.rigie],
+    ['morimonte-emmanuel', 'Morimonte, Emmanuel', 'Server Administrator', CATEGORIES.ENGINEERING, teamImages.emman],
+    ['pascua-ronald', 'Pascua, Ronald', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.der],
+    ['talingting-richy', 'Talingting, Richy RV', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.richy],
+    ['valencia-ely', 'Valencia, Ely Jose', 'Software Engineer', CATEGORIES.ENGINEERING, teamImages.ely],
 
     // Junior Software Engineers
-    ['arnesto-arnold', 'Arnesto, Arnold', 'Junior Software Engineer', CATEGORIES.ENGINEERING],
-    ['pagnanawon-allen', 'Pagnanawon, Allen', 'Junior Software Engineer', CATEGORIES.ENGINEERING],
-    ['palallos-hamuel', 'Palallos, Hamuel', 'Junior Software Engineer', CATEGORIES.ENGINEERING],
-    ['pasulohan-frances', 'Pasulohan, Frances', 'Junior Software Engineer', CATEGORIES.ENGINEERING],
+    ['arnesto-arnold', 'Arnesto, Arnold', 'Junior Software Engineer', CATEGORIES.ENGINEERING, teamImages.arnoldjr],
+    ['pagnanawon-allen', 'Pagnanawon, Allen', 'Junior Software Engineer', CATEGORIES.ENGINEERING, teamImages.allen],
+    ['palallos-hamuel', 'Palallos, Hamuel', 'Junior Software Engineer', CATEGORIES.ENGINEERING, teamImages.hamuel],
+    ['pasulohan-frances', 'Pasulohan, Frances', 'Junior Software Engineer', CATEGORIES.ENGINEERING, teamImages.frances],
 
     // Marketing Team
     ['albiso-johnrey', 'Albiso, John Rey', 'Content Strategist', CATEGORIES.MARKETING],
@@ -70,9 +71,9 @@ const membersData = [
     ['rio-john', 'Rio, John', 'Multimedia Designer', CATEGORIES.MARKETING],
 
     // Product Design
-    ['abines-ada', 'Abines, Ada Katrina', 'Product Design Manager', CATEGORIES.PRODUCT_DESIGN, teamImages.MamAds],
-    ['jo-kenanaiah', 'Jo, Kenanaiah', 'UI/UX Designer', CATEGORIES.PRODUCT_DESIGN, teamImages.sirKen],
-    ['diopenes-michael', 'Diopenes, Michael John', 'UI/UX Designer', CATEGORIES.PRODUCT_DESIGN, teamImages.Mike],
+    ['abines-ada', 'Abines, Ada Katrina', 'Product Design Manager', CATEGORIES.PRODUCT_DESIGN, teamImages.ads],
+    ['jo-kenanaiah', 'Jo, Kenanaiah', 'UI/UX Designer', CATEGORIES.PRODUCT_DESIGN, teamImages.ken],
+    ['diopenes-michael', 'Diopenes, Michael John', 'UI/UX Designer', CATEGORIES.PRODUCT_DESIGN, teamImages.mike],
     ['alumbre-claire', 'Alumbre, Claire', 'Junior UI/UX Designer', CATEGORIES.PRODUCT_DESIGN, teamImages.claire],
 
     // Quality Assurance
@@ -81,7 +82,9 @@ const membersData = [
     ['mercado-elmer', 'Mercado, Elmer', 'Quality Assurance Analyst', CATEGORIES.QA],
 
     // Research & Admin Works
-    ['infante-fabe', 'Infante, Fabe Hillary', 'Researcher / Admin Works', CATEGORIES.ADMIN, teamImages.MamFabe],];
+    ['infante-fabe', 'Infante, Fabe Hillary', 'Researcher / Admin Works', CATEGORIES.ADMIN, teamImages.fabe],
+    ['neil-willer', 'Nobleza, Neil Willer', 'LightofHeaven', CATEGORIES.NEIL],];
+
 
 export const teamMembers = membersData.map((data, index) => {
     const [id, name, role, category, image] = data;
