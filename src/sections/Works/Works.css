@@ -5,6 +5,18 @@
     overflow: hidden;
 }
 
+.works h2 {
+    margin-bottom: 1.2rem;
+}
+
+.works .section-header p {
+    font-weight: 300;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
 .works-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

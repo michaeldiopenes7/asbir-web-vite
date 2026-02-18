@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/" element={
           <main>
             <SEO
-              title="AsbirTech | Expert Web & Mobile App Development Agency"
+              title="AsbirTech"
               description="AsbirTech enables businesses to scale, transform, and gain a competitive advantage with robust and flexible web and mobile solutions."
               canonical="/"
             />

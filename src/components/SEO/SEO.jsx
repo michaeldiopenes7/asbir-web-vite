@@ -10,11 +10,11 @@ const SEO = ({
     image,
     schema
 }) => {
-    const siteTitle = 'AsbirTech - Web & Mobile Development Solutions';
+    const siteTitle = 'AsbirTech';
     const siteUrl = 'https://asbirtech.com';
     const defaultImage = 'https://asbirtech.com/og-image.jpg';
 
-    const fullTitle = title ? `${title} | AsbirTech` : siteTitle;
+    const fullTitle = title === 'AsbirTech' ? title : (title ? `${title} | AsbirTech` : siteTitle);
     const fullUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
     const metaImage = image || defaultImage;
 
