@@ -77,19 +77,33 @@ const CaseStudy = () => {
                 </div>
 
                 <div className="cs-content">
-                    <section className="cs-section">
-                        <h2 className="cs-section-label">THE CHALLENGE</h2>
-                        <p className="cs-text">{caseStudy.challenge}</p>
-                    </section>
+                    {caseStudy.overview && (
+                        <section className="cs-section">
+                            <h2 className="cs-section-label">OVERVIEW</h2>
+                            <p className="cs-text">{caseStudy.overview}</p>
+                        </section>
+                    )}
 
+                    {caseStudy.challenge && (
+                        <section className="cs-section">
+                            <h2 className="cs-section-label">THE CHALLENGE</h2>
+                            <p className="cs-text">{caseStudy.challenge}</p>
+                        </section>
+                    )}
 
+                    {caseStudy.features && (
+                        <section className="cs-section">
+                            <h2 className="cs-section-label">KEY FEATURES</h2>
+                            <p className="cs-text">{caseStudy.features}</p>
+                        </section>
+                    )}
 
-                    <section className="cs-section">
-                        <h2 className="cs-section-label">THE SOLUTION</h2>
-                        <p className="cs-text">{caseStudy.solution}</p>
-                    </section>
-
-
+                    {caseStudy.solution && (
+                        <section className="cs-section">
+                            <h2 className="cs-section-label">THE SOLUTION</h2>
+                            <p className="cs-text">{caseStudy.solution}</p>
+                        </section>
+                    )}
 
                     <section className="cs-tech-stack">
                         {caseStudy.technologies && caseStudy.technologies.join(' · ')}
