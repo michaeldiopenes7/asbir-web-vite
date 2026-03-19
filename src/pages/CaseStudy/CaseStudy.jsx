@@ -62,13 +62,7 @@ const CaseStudy = () => {
                     </div>
                     <h1 className="cs-title">{caseStudy.title}</h1>
                     <p className="cs-description">{caseStudy.description}</p>
-                    <div className="cs-meta">
-                        <span>{caseStudy.client}</span>
-                        <span className="cs-meta-divider">•</span>
-                        <span>{caseStudy.year}</span>
-                        <span className="cs-meta-divider">•</span>
-                        <span>{caseStudy.duration}</span>
-                    </div>
+
                 </header>
 
                 <div className="cs-hero-image-wrapper">
